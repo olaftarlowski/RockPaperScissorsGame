@@ -50,6 +50,44 @@ body {
     background: blue;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .pickField .chooseSection .hands {
+    margin: 20px;
+    flex-basis: 1;
+    width: 160px;
+    height: 160px;
+  }
+  .pickField .chooseSection .chooseOptions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .lizardHand {
+    
+    background: url(./assets/lizard.jpg);
+    background-size: cover;
+  }
+  .rockHand {
+    background: url(./assets/rock.jpg);
+    background-size: cover;
+  }
+  .paperHand {
+    background: url(./assets/paper.jpg);
+    background-size: cover;
+  }
+  .scissorsHand {
+    background: url(./assets/scissors.jpg);
+    background-size: cover;
+  }
+  .spockHand {
+    background: url(./assets/spock.jpg);
+    background-size: cover;
   }
   .resultField {
       background: green;
