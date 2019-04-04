@@ -6,6 +6,7 @@ body {
 .topnav {
     background-color: #333;
     overflow: hidden;
+
 }
 
 .topnav a {
@@ -70,15 +71,29 @@ body {
 
 }
 
-.pickField .chooseSection .hands {
+.pickField .chooseSection .chooseOptions .hands {
     margin: 2%;
     text-align: center;
+    /*    width: 6rem;*/
     flex: 1 1 auto;
     height: auto;
-/*
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /*
     min-width: 100px;
     min-height: 100px;
 */
+}
+
+.pickField .chooseSection .chooseOptions .hands div {
+    position: absolute;
+    color: black;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 4px;
+    box-sizing: border-box;
 }
 
 .pickField .chooseSection .hands:after {
@@ -118,4 +133,52 @@ body {
     height: 35vh;
     width: 95%;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .pickField .chooseSection .chooseOptions .hands {
+        margin: 2%;
+        text-align: center;
+        width: 6rem;
+        flex: none;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
+
+    .pickField .chooseSection .chooseOptions .hands div {
+        position: absolute;
+        color: black;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 4px;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 734px) {
+    .pickField .chooseSection .chooseOptions .hands {
+        margin: 2%;
+        text-align: center;
+        width: 5rem;
+        flex: none;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
+
+    .pickField .chooseSection .chooseOptions .hands div {
+        position: absolute;
+        color: black;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 2px;
+        box-sizing: border-box;
+    }
 }
