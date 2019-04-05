@@ -67,7 +67,7 @@ body {
 }
 
 .pickField .resultSection button {
-    
+
     padding: 4px 15px;
     border: 2px solid black;
     text-transform: uppercase;
@@ -155,10 +155,37 @@ body {
 
 .resultField {
     background: green;
-    height: 35vh;
+    height: auto;
     width: 95%;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding: 4% 20%;
+
+
 }
+
+.resultField h4,
+h5 {
+    color: #333;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.resultField h3 {
+    color: #333;
+    margin: 5px auto;
+}
+
+.resultField p {
+    margin: 2px auto;
+    font-size: 14px;
+}
+
+.resultField span {
+    float: right;
+    margin-left: 40px;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .pickField .chooseSection .chooseOptions .hands {
