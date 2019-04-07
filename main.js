@@ -18,7 +18,7 @@ function handSelection() {
     gameChoice.playerChoice = this.dataset.option;
     hands.forEach(hand => hand.style.boxShadow = '');
     this.style.transition = "0.3s"
-    this.style.boxShadow = "0 0 40px 10px red";
+    this.style.boxShadow = "0 0 30px 10px #7d09b7";
 
 }
 
@@ -61,14 +61,14 @@ function printResult(player, ai, result){
     const actualResult = document.querySelector('.printActual');
     if (result === 'win'){
         showResultField.textContent = "You won!";
-        showResultField.style.color = "green";
+        showResultField.style.color = "#28931a";
         document.querySelector('p.wins span').textContent = ++gameSummary.winsNumber;
    
     actualResult.textContent = 'Player';
 
     } else if (result === 'lost') {
         showResultField.textContent = "You lost";
-        showResultField.style.color = "red";
+        showResultField.style.color = "#a82121";
         document.querySelector('p.losses span').textContent = ++gameSummary.lossesNumber;
         actualResult.textContent = 'AI';
     } else {
