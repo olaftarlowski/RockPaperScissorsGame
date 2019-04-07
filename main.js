@@ -27,9 +27,8 @@ function aiHandSelection() {
 }
 
 function checkResult(playerResult, aiResult) {
-    
+
     if (playerResult == aiResult) {
-        console.log('1');
         return 'draw';
     } else if (
         (playerResult == 'lizard' && aiResult == 'spock') || (playerResult == 'lizard' && aiResult == 'paper') ||
@@ -38,33 +37,32 @@ function checkResult(playerResult, aiResult) {
         (playerResult == 'scissors' && aiResult == 'lizard') || (playerResult == 'scissors' && aiResult == 'paper') ||
         (playerResult == 'spock' && aiResult == 'scissors') || (playerResult == 'spock' && aiResult == 'rock')
     ) {
-        console.log('2');
         return 'win';
     } else {
-        console.log('3');
         return 'lost';
     }
 
 }
+
 function endGame() {
     document.querySelector(`[data-option="${gameChoice.playerChoice}"]`).style.boxShadow = '';
-    
+
     gameChoice.playerChoice = '';
     gameChoice.aiChoice = '';
 }
 
-function printResult(player, ai, result){
+function printResult(player, ai, result) {
     document.querySelector('[data-summary="your-choice"]').textContent = player;
     document.querySelector('[data-summary="ai-choice"]').textContent = ai;
     document.querySelector('p.numbers span').textContent = ++gameSummary.gamesNumber;
     let showResultField = document.querySelector('span.showResult');
     const actualResult = document.querySelector('.printActual');
-    if (result === 'win'){
+    if (result === 'win') {
         showResultField.textContent = "You won!";
         showResultField.style.color = "#28931a";
         document.querySelector('p.wins span').textContent = ++gameSummary.winsNumber;
-   
-    actualResult.textContent = 'Player';
+
+        actualResult.textContent = 'Player';
 
     } else if (result === 'lost') {
         showResultField.textContent = "You lost";
@@ -79,14 +77,13 @@ function printResult(player, ai, result){
     }
 }
 
-function startGame(){
+function startGame() {
     if (gameChoice.playerChoice == '') {
         alert("Choose your hand");
         return;
     }
     gameChoice.aiChoice = aiHandSelection();
     const gameResult = checkResult(gameChoice.playerChoice, gameChoice.aiChoice);
-    console.log('wynik:' + gameResult);
     printResult(gameChoice.playerChoice, gameChoice.aiChoice, gameResult);
     endGame()
 }
