@@ -1,12 +1,11 @@
 body {
     margin: -1px;
     font-family: 'Roboto', sans-serif;
-    background: #232323;
-    /* background: #36D1DC; */
+    background: #36D1DC;
     /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #000, #36D1DC); */
+    background: -webkit-linear-gradient(to right, #000, #36D1DC);
     /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, #fff, #36D1DC); */
+    background: linear-gradient(to right, #fff, #36D1DC);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -95,7 +94,7 @@ body {
 .pickField .resultSection button {
     border-radius: 44px;
     padding: 4px 15px;
-    border: 0.01px solid black;
+    border: 1px solid #232323;
     text-transform: uppercase;
     background-color: #fff;
     font-weight: bold;
@@ -212,6 +211,7 @@ h5 {
 .resultField span {
     float: right;
     margin-left: 40px;
+    text-transform: capitalize;
 }
 
 
