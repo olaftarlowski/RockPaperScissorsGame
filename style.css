@@ -153,7 +153,7 @@ body {
 
 .pickField .chooseSection .chooseOptions .hands div {
     position: absolute;
-    color: black;
+    color: white;
     font-size: 22px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -246,7 +246,7 @@ h5 {
 
     .pickField .chooseSection .chooseOptions .hands div {
         position: absolute;
-        color: black;
+        color: white;
         font-size: 15px;
         font-weight: 700;
         letter-spacing: 2px;
@@ -287,7 +287,7 @@ h5 {
 
     .pickField .chooseSection .chooseOptions .hands div {
         position: absolute;
-        color: black;
+        color: white;
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 1px;
