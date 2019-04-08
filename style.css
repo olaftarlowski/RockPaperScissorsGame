@@ -86,9 +86,21 @@ body {
     font-weight: bold;
     margin: 5px 10px;
     transition: .3s;
-    font-size: 26px;
-    padding: 5px 10px;
+    font-size: 22px;
+    padding: 4px 8px;
     text-transform: uppercase;
+}
+
+.pickField .resultSection .showAiResult {
+    background: url(./assets/ask-sign.jpg);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    box-sizing: border-box;
+    border: 2px solid #a82121;
+    transform: scaleX(-1);
+    border-radius: 15px;
 }
 
 .pickField .resultSection button {
@@ -157,28 +169,32 @@ body {
 
 .lizardHand {
 
-    background: url(./assets/lizard.jpg);
-    background-size: cover;
+    background: url(./assets/lizard.jpg) !important;
+    background-size: cover !important;
 }
 
 .rockHand {
-    background: url(./assets/rock.jpg);
-    background-size: cover;
+    background: url(./assets/rock.jpg) !important;
+    background-size: cover !important;
+    
 }
 
 .paperHand {
-    background: url(./assets/paper.jpg);
-    background-size: cover;
+    background: url(./assets/paper.jpg) !important;
+    background-size: cover !important;
+    
 }
 
 .scissorsHand {
-    background: url(./assets/scissors.jpg);
-    background-size: cover;
+    background: url(./assets/scissors.jpg) !important;
+    background-size: cover !important;
+    
 }
 
 .spockHand {
-    background: url(./assets/spock.jpg);
-    background-size: cover;
+    background: url(./assets/spock.jpg) !important;
+    background-size: cover !important;
+    
 }
 
 .resultField {

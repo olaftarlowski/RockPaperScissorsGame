@@ -12,9 +12,15 @@ const gameChoice = {
 
 const hands = [...document.querySelectorAll(".chooseOptions .hands")];
 const btnSubmit = document.querySelector(".resultSection .playButton");
+const aiChoiceWindow = document.querySelector("div.showAiResult");
 
+// aiChoiceWindow.classList.add(hands[Math.floor(Math.random() * hands.length)].classList[0]);
 
 function handSelection() {
+    aiChoiceWindow.classList.remove(aiChoiceWindow.classList[1]);
+    aiChoiceWindow.style.background = "url(./assets/randomize-gif.gif)";
+    aiChoiceWindow.style.backgroundSize = "cover";
+    
     gameChoice.playerChoice = this.dataset.option;
     hands.forEach(hand => hand.style.boxShadow = '');
     this.style.transition = "0.3s"
@@ -23,7 +29,11 @@ function handSelection() {
 }
 
 function aiHandSelection() {
-    return hands[Math.floor(Math.random() * hands.length)].dataset.option;
+    let x = hands[Math.floor(Math.random() * hands.length)];
+    let xData = x.dataset.option;
+    aiChoiceWindow.classList.remove(aiChoiceWindow.classList[1]);
+    aiChoiceWindow.classList.add(x.classList[0]);
+    return xData;
 }
 
 function checkResult(playerResult, aiResult) {
@@ -70,7 +80,7 @@ function printResult(player, ai, result) {
         document.querySelector('p.losses span').textContent = ++gameSummary.lossesNumber;
         actualResult.textContent = 'AI';
     } else {
-        showResultField.textContent = "It's a draw";
+        showResultField.textContent = "Draw";
         showResultField.style.color = "gray";
         document.querySelector('p.draws span').textContent = ++gameSummary.drawsNumber;
         actualResult.textContent = 'Draw';
