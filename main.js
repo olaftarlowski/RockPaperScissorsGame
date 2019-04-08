@@ -102,7 +102,7 @@ btnSubmit.addEventListener('click', startGame);
 
 
 
-////////////////////simualtor fnction
+////////////////////simulator function
 
 const simulButton = document.querySelector("#btnSimulation");
 simulButton.addEventListener('click', simulation);
@@ -111,12 +111,13 @@ simulButton.addEventListener('click', simulation);
 function simulation() {
     let numberOfSimulations = document.getElementById("simulationNumber").value;
     if(numberOfSimulations < 0 || numberOfSimulations > 10000){
-        alert("For technical reasons, the range can not exceed 10,000. We're sorry for inconvenience");
+        alert("For technical reasons, the range can not exceed 10,000 and must be higher than -1. We're sorry for inconvenience");
         return;
     }
     for (var i = 1; i <= numberOfSimulations; i++) {
         if (!gameChoice.playerChoice){
             alert("choose your hand");
+            
             return;
         }
         startSimulation ();
