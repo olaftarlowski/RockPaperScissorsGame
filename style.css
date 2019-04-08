@@ -176,25 +176,25 @@ body {
 .rockHand {
     background: url(./assets/rock.jpg) !important;
     background-size: cover !important;
-    
+
 }
 
 .paperHand {
     background: url(./assets/paper.jpg) !important;
     background-size: cover !important;
-    
+
 }
 
 .scissorsHand {
     background: url(./assets/scissors.jpg) !important;
     background-size: cover !important;
-    
+
 }
 
 .spockHand {
     background: url(./assets/spock.jpg) !important;
     background-size: cover !important;
-    
+
 }
 
 .resultField {

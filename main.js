@@ -14,13 +14,12 @@ const hands = [...document.querySelectorAll(".chooseOptions .hands")];
 const btnSubmit = document.querySelector(".resultSection .playButton");
 const aiChoiceWindow = document.querySelector("div.showAiResult");
 
-// aiChoiceWindow.classList.add(hands[Math.floor(Math.random() * hands.length)].classList[0]);
 
 function handSelection() {
     aiChoiceWindow.classList.remove(aiChoiceWindow.classList[1]);
     aiChoiceWindow.style.background = "url(./assets/randomize-gif.gif)";
     aiChoiceWindow.style.backgroundSize = "cover";
-    
+
     gameChoice.playerChoice = this.dataset.option;
     hands.forEach(hand => hand.style.boxShadow = '');
     this.style.transition = "0.3s"
@@ -29,11 +28,11 @@ function handSelection() {
 }
 
 function aiHandSelection() {
-    let x = hands[Math.floor(Math.random() * hands.length)];
-    let xData = x.dataset.option;
+    let randomedAiHand = hands[Math.floor(Math.random() * hands.length)];
+    let randomedAiHandData = randomedAiHand.dataset.option;
     aiChoiceWindow.classList.remove(aiChoiceWindow.classList[1]);
-    aiChoiceWindow.classList.add(x.classList[0]);
-    return xData;
+    aiChoiceWindow.classList.add(randomedAiHand.classList[0]);
+    return randomedAiHandData;
 }
 
 function checkResult(playerResult, aiResult) {
