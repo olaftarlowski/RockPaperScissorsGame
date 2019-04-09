@@ -233,8 +233,9 @@ h5 {
 .simulationField{
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 40px;
+    
 
 }
 .simulationField input {
@@ -249,7 +250,6 @@ h5 {
     text-transform: uppercase;
     background-color: #fff;
     font-weight: bold;
-    margin: 0px 16px;
     transition: .3s;
     font-size: 20px;
     cursor: pointer;
