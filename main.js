@@ -66,8 +66,13 @@ function printResult(player, ai, result) {
     document.querySelector('p.numbers span').textContent = ++gameSummary.gamesNumber;
     let showResultField = document.querySelector('span.showResult');
     const actualResult = document.querySelector('.printActual');
+
+
+
     if (result === 'win') {
-        showResultField.textContent = "You won!";
+        const resultMessage = "You won!";
+        showResultField.textContent = resultMessage;
+
         showResultField.style.color = "#28931a";
         document.querySelector('p.wins span').textContent = ++gameSummary.winsNumber;
 
@@ -84,7 +89,10 @@ function printResult(player, ai, result) {
         document.querySelector('p.draws span').textContent = ++gameSummary.drawsNumber;
         actualResult.textContent = 'Draw';
     }
+
 }
+
+
 
 function startGame() {
     if (gameChoice.playerChoice == '') {
@@ -110,22 +118,22 @@ simulButton.addEventListener('click', simulation);
 
 function simulation() {
     let numberOfSimulations = document.getElementById("simulationNumber").value;
-    if(numberOfSimulations < 0 || numberOfSimulations > 10000){
+    if (numberOfSimulations < 0 || numberOfSimulations > 10000) {
         alert("For technical reasons, the range can not exceed 10,000 and must be higher than -1. We're sorry for inconvenience");
         return;
     }
     for (var i = 1; i <= numberOfSimulations; i++) {
-        if (!gameChoice.playerChoice){
+        if (!gameChoice.playerChoice) {
             alert("choose your hand");
-            
+
             return;
         }
-        startSimulation ();
+        startSimulation();
     }
-    
+
 }
 
-function startSimulation () {
+function startSimulation() {
     gameChoice.aiChoice = aiHandSelection();
     const gameResult = checkResult(gameChoice.playerChoice, gameChoice.aiChoice);
     printResult(gameChoice.playerChoice, gameChoice.aiChoice, gameResult);

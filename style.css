@@ -103,10 +103,10 @@ body {
     border-radius: 15px;
 }
 
-.pickField .resultSection button {
+.pickField .resultSection .playButton {
     border-radius: 44px;
     padding: 4px 15px;
-    border: 1px solid #232323;
+    border: 3px ridge #007a2e;
     text-transform: uppercase;
     background-color: #fff;
     font-weight: bold;
@@ -115,7 +115,13 @@ body {
     font-size: 30px;
     cursor: pointer;
     padding: 10px;
-    background: #edf3ff
+    background: #b5eeff;
+
+}
+
+.pickField .resultSection .playButton:hover {
+    background-color: #d6f5ff;
+
 }
 
 .pickField .chooseSection {
@@ -150,6 +156,12 @@ body {
     border-radius: 20px 10px 25px 10px;
     border: 1px solid #919191;
     cursor: pointer;
+    box-sizing: border-box;
+}
+
+.pickField .chooseSection .chooseOptions .hands:hover {
+    border: 2px solid #4CAF50;
+    transition: 0.3s;
 }
 
 .pickField .chooseSection .chooseOptions .hands div {
@@ -159,7 +171,7 @@ body {
     font-weight: 800;
     letter-spacing: 2px;
     padding: 4px;
-    
+
 }
 
 .pickField .chooseSection .hands:after {
@@ -230,22 +242,29 @@ h5 {
     margin-left: 40px;
     text-transform: capitalize;
 }
-.simulationField{
+
+.simulationField {
     margin: auto;
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
-    
+    flex-direction: column;
+
+
 
 }
+
 .simulationField input {
     width: 250px;
     height: 30px;
-    margin: 0 40px;
+    margin: auto;
+    margin-bottom: 40px;
 }
+
 .simulationField button {
+    margin: auto;
     border-radius: 11px;
-    padding: 4px 15px;
+    padding: 8px 35px;
     border: 1px solid #232323;
     text-transform: uppercase;
     background-color: #fff;
